@@ -1,6 +1,7 @@
 \# Projeto-Integrador-Grupo18
 
 \## Integrantes
+
 \-João Paulo da Silva Barbosa
 
 \-Matheus de Oliveira Santos
@@ -55,7 +56,7 @@ A partir desses dados, o objetivo da análise é identificar padrões de engajam
 
 \## Semana 3 – Transformações e enriquecimento
 
-\*\*Responsável:\*\* Matheus e Murilo
+\*\*Responsável:\*\* Matheus e João
 
 
 
@@ -83,7 +84,7 @@ A partir desses dados, o objetivo da análise é identificar padrões de engajam
 
 \## Semana 4 – Modelagem e carga
 
-\*\*Responsável:\*\* Matheus e Murilo
+\*\*Responsável:\*\* João e Murilo
 
 
 
@@ -129,7 +130,7 @@ A partir desses dados, o objetivo da análise é identificar padrões de engajam
 
 \## Semana 6 (meia semana) – Finalização e documentação
 
-\*\*Responsáveis:\*\* Matheus e Murilo
+\*\*Responsáveis:\*\* Matheus, Murilo e João
 
 
 
