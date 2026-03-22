@@ -1,6 +1,7 @@
 \# Projeto-Integrador-Grupo18
 
 \## Integrantes
+\-João Paulo da Silva Barbosa
 
 \-Matheus de Oliveira Santos
 
