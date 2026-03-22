@@ -2,10 +2,6 @@
 
 \## Integrantes
 
-\-João Paulo da Silva Barbosa
-
-\-Mateus Custódio Pereira Reis
-
 \-Matheus de Oliveira Santos
 
 \-Murilo de Oliveira Santos
@@ -26,7 +22,7 @@ A partir desses dados, o objetivo da análise é identificar padrões de engajam
 
 \## Semana 1 – Extração e organização dos dados
 
-\*\*Responsável:\*\* Integrante 1
+\*\*Responsável:\*\* Matheus
 
 
 
@@ -40,7 +36,7 @@ A partir desses dados, o objetivo da análise é identificar padrões de engajam
 
 \## Semana 2 – Limpeza e tratamento dos dados
 
-\*\*Responsável:\*\* Integrante 2
+\*\*Responsável:\*\* Murilo
 
 
 
@@ -58,7 +54,7 @@ A partir desses dados, o objetivo da análise é identificar padrões de engajam
 
 \## Semana 3 – Transformações e enriquecimento
 
-\*\*Responsável:\*\* Integrante 3 e 4
+\*\*Responsável:\*\* Matheus e Murilo
 
 
 
@@ -86,7 +82,7 @@ A partir desses dados, o objetivo da análise é identificar padrões de engajam
 
 \## Semana 4 – Modelagem e carga
 
-\*\*Responsável:\*\* Integrante 1 e 2
+\*\*Responsável:\*\* Matheus e Murilo
 
 
 
@@ -102,7 +98,7 @@ A partir desses dados, o objetivo da análise é identificar padrões de engajam
 
 \## Semana 5 – Planejamento do dashboard e análise
 
-\*\*Responsável:\*\* Integrante 3 e 4
+\*\*Responsável:\*\* Matheus e Murilo
 
 
 
@@ -132,7 +128,7 @@ A partir desses dados, o objetivo da análise é identificar padrões de engajam
 
 \## Semana 6 (meia semana) – Finalização e documentação
 
-\*\*Responsáveis:\*\* Todos
+\*\*Responsáveis:\*\* Matheus e Murilo
 
 
 
