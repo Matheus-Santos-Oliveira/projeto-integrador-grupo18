@@ -11,7 +11,7 @@
 
 A base de dados utilizada foi obtida no Kaggle, intitulada Spotify User Behavior and Pattern, contendo cerca de 50 mil registros que simulam o comportamento de usuários em uma plataforma de streaming de música semelhante ao Spotify.
 
-A partir desses dados, o objetivo da análise é identificar padrões de engajamento, satisfação e conversão para planos premium, considerando variáveis como tempo de escuta, preferências musicais e interação com anúncios. Dessa forma, busca-se gerar insights que auxiliem na compreensão da experiência do usuário e apoiem estratégias de retenção e monetização.
+A partir desses dados, o objetivo da análise é identificar padrões de engajamento, satisfação, adição de futuras funções para melhorar a aprovação dos usuários,conversão para planos premium, considerando variáveis como tempo de escuta, preferências musicais, funcionalidades mais desejadas pelos usuários (analisadas a partir de variáveis qualitativas do dataset) e interação com anúncios. Dessa forma, busca-se gerar insights que auxiliem na compreensão da experiência do usuário e apoiem estratégias de retenção e monetização.
 
 
 ## Planejamento do processo de ETL
@@ -123,7 +123,8 @@ avg_skips_per_day
 
 **Criação de métricas derivadas:**
 
-- Média de tempo de escuta  
+- Média de tempo de escuta
+- Funções mais pedidas
 - Média de satisfação  
 
 - Agrupamentos e agregações  
@@ -147,7 +148,8 @@ avg_skips_per_day
 
 **Criação dos gráficos:**
 
-- Gêneros mais ouvidos  
+- Gêneros mais ouvidos
+- Funções mais pedidas
 - Tempo de escuta por tipo de assinatura  
 - Impacto dos anúncios na satisfação  
 - Conversão para premium  
@@ -168,6 +170,9 @@ avg_skips_per_day
 - Preparação para apresentação  
 
 
-## Conclusão
+### Conclusão
 
-Consideraremos como métricas e indicadores o tempo médio de escuta semanal, satisfação média dos usuários, média de músicas puladas por dia (skips), taxa de conversão para planos premium, total de usuários e percentual de interação com anúncios, permitindo analisar o engajamento, a experiência do usuário e os fatores que influenciam a monetização da plataforma.
+Consideraremos como métricas e indicadores o tempo médio de escuta semanal, a satisfação média dos usuários, a média de músicas puladas por dia (skips), a taxa de conversão para planos premium, o total de usuários e o percentual de interação com anúncios, permitindo analisar o engajamento, a experiência do usuário e os fatores associados à monetização da plataforma, incluindo a relação entre a exposição a anúncios e a conversão para planos premium.
+
+A integração dessas métricas possibilita compreender o comportamento dos usuários em diferentes níveis de interação com a plataforma, identificando padrões de uso, satisfação e retenção. Além disso, a análise das funcionalidades mais desejadas pelos usuários complementa o estudo ao evidenciar oportunidades de melhoria na experiência da plataforma, contribuindo para futuras estratégias de evolução do produto e fortalecimento da proposta de valor dos planos premium.
+
