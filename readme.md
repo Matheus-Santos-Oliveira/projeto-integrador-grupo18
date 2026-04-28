@@ -11,7 +11,7 @@
 
 A base de dados utilizada foi obtida no Kaggle, intitulada Spotify User Behavior and Pattern, contendo cerca de 50 mil registros que simulam o comportamento de usuários em uma plataforma de streaming de música semelhante ao Spotify.
 
-A partir desses dados, o objetivo da análise é identificar padrões de engajamento, satisfação, adição de futuras funções para melhorar a aprovação dos usuários,conversão para planos premium, considerando variáveis como tempo de escuta, preferências musicais, funcionalidades mais desejadas pelos usuários (analisadas a partir de variáveis qualitativas do dataset) e interação com anúncios. Dessa forma, busca-se gerar insights que auxiliem na compreensão da experiência do usuário e apoiem estratégias de retenção e monetização.
+A partir desses dados, o objetivo da análise é identificar padrões de engajamento, satisfação, adição de futuras funções para melhorar a aprovação dos usuários, conversão para planos premium, considerando variáveis como tempo de escuta, preferências musicais, funcionalidades mais desejadas pelos usuários (analisadas a partir de variáveis qualitativas do dataset) e interação com anúncios. Dessa forma, busca-se gerar insights que auxiliem na compreensão da experiência do usuário e apoiem estratégias de retenção e monetização.
 
 
 ## Planejamento do processo de ETL
@@ -98,23 +98,22 @@ playlists_created
 avg_skips_per_day
 - Tipo: inteiro
 - Descrição: Média de músicas puladas por dia.
-- 
-Nesta etapa foi realizado o processo de ETL para preparação dos dados de comportamento de usuários, incluindo análise de consistência e tratamento das variáveis. Foram aplicados quartis (Q1 e Q3) e o intervalo interquartil (IQR) para identificação de outliers nas variáveis numéricas relacionadas ao comportamento e uso, como idade, horas médias de escuta semanal, número de playlists criadas, tempo de inatividade e skips diários, utilizando uma heurística baseada na porcentagem de valores extremos para avaliar seu impacto nas etapas posteriores da análise. Também foi realizada verificação de inconsistências em variáveis categóricas como país, tipo de assinatura, gênero favorito, dispositivo principal e preferências de recursos, por meio da normalização de texto para identificação de diferenças de escrita e capitalização, não sendo identificadas inconsistências semânticas relevantes. No ETL foram realizadas conversões de tipos de dados, incluindo transformação de datas de cadastro para datetime, variáveis categóricas para category e variáveis binárias de interação e conversão de anúncios (Yes/No) para valores booleanos. Não foi necessária uma limpeza profunda dos dados, uma vez que não foram identificados valores nulos, registros duplicados ou inconsistências estruturais relevantes no conjunto analisado.
 
 ### Semana 2 – Limpeza e tratamento dos dados
 
-**Responsável:** Murilo
+**Responsável:** Matheus e Murilo
 
-- Remoção de valores nulos  
-- Tratamento de inconsistências  
-- Padronização dos nomes das colunas  
-- Conversão de tipos de dados  
-- Remoção de duplicidades  
+- Verificação de valores nulos
+- Verificação de duplicidades
+- Análise de inconsistências categóricas
+- Conversão de tipos de dados
+- Análise de outliers
 
+Nesta etapa foi realizado o processo de ETL para preparação dos dados de comportamento de usuários, incluindo análise de consistência e tratamento das variáveis. Foram aplicados quartis (Q1 e Q3) e o intervalo interquartil (IQR) para identificação de outliers nas variáveis numéricas relacionadas ao comportamento e uso, como idade, horas médias de escuta semanal, número de playlists criadas, tempo de inatividade e skips diários, utilizando uma heurística baseada na porcentagem de valores extremos para avaliar seu impacto nas etapas posteriores da análise. Também foi realizada verificação de inconsistências em variáveis categóricas como país, tipo de assinatura, gênero favorito, dispositivo principal e preferências de recursos, por meio da normalização de texto para identificação de diferenças de escrita e capitalização, não sendo identificadas inconsistências semânticas relevantes. No ETL foram realizadas conversões de tipos de dados, incluindo transformação de datas de cadastro para datetime, variáveis categóricas para category e variáveis binárias de interação e conversão de anúncios (Yes/No) para valores booleanos. Não foi necessária uma limpeza profunda dos dados, uma vez que não foram identificados valores nulos, registros duplicados ou inconsistências estruturais relevantes no conjunto analisado.
 
 ### Semana 3 – Transformações e enriquecimento
 
-**Responsável:** Matheus e João
+**Responsável:** Murilo 
 
 **Criação de novas colunas:**
 
@@ -133,7 +132,7 @@ Nesta etapa foi realizado o processo de ETL para preparação dos dados de compo
 
 ### Semana 4 – Modelagem e carga
 
-**Responsável:** João e Murilo
+**Responsável:** João 
 
 - Estruturação da tabela final (modelo analítico)  
 - Exportação dos dados tratados (CSV ou banco)  
@@ -143,7 +142,7 @@ Nesta etapa foi realizado o processo de ETL para preparação dos dados de compo
 
 ### Semana 5 – Planejamento do dashboard e análise
 
-**Responsável:** Matheus e Murilo
+**Responsável:** Todos
 
 - Definição dos KPIs  
 
