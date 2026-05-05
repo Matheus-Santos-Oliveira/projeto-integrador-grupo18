@@ -25,7 +25,7 @@ A partir desses dados, o objetivo da análise é identificar padrões de engajam
 - Alocação da estrutura da base original na pasta data  
 - Documentação da estrutura da base no README  
 
-#### 📚 Dicionário de Dados
+#### 📚 Dicionário de Dados - Resultado da atividade da semana
 
 user_id
 - Tipo: inteiro
@@ -108,16 +108,29 @@ avg_skips_per_day
 - Análise de inconsistências categóricas
 - Conversão de tipos de dados
 - Análise de outliers
-
+- 
+#### Resultado da atividade da semana
 Nesta etapa foi realizado o processo de ETL para preparação dos dados de comportamento de usuários, incluindo análise de consistência e tratamento das variáveis. Foram aplicados quartis (Q1 e Q3) e o intervalo interquartil (IQR) para identificação de outliers nas variáveis numéricas relacionadas ao comportamento e uso, como idade, horas médias de escuta semanal, número de playlists criadas, tempo de inatividade e skips diários, utilizando uma heurística baseada na porcentagem de valores extremos para avaliar seu impacto nas etapas posteriores da análise. Também foi realizada verificação de inconsistências em variáveis categóricas como país, tipo de assinatura, gênero favorito, dispositivo principal e preferências de recursos, por meio da normalização de texto para identificação de diferenças de escrita e capitalização, não sendo identificadas inconsistências semânticas relevantes. No ETL foram realizadas conversões de tipos de dados, incluindo transformação de datas de cadastro para datetime, variáveis categóricas para category e variáveis binárias de interação e conversão de anúncios (Yes/No) para valores booleanos. Não foi necessária uma limpeza profunda dos dados, uma vez que não foram identificados valores nulos, registros duplicados ou inconsistências estruturais relevantes no conjunto analisado.
 
 ### Semana 3 – Transformações e Enriquecimento dos Dados
 
 **Responsável:** Murilo de Oliveira Santos
 
----
+**Criação de novas colunas:**
 
-## Novas Colunas Derivadas
+- Faixa etária  
+- Tipo de usuário (heavy/casual)  
+- Grupo de anúncio  
+
+**Criação de métricas derivadas:**
+
+- Média de tempo de escuta
+- Funções mais pedidas
+- Média de satisfação  
+
+- Agrupamentos e agregações  
+
+## Novas Colunas Derivadas - Resultado das atividades da semana
 
 ### `age_group` — Faixa etária
 Criada a partir da coluna `age` com os seguintes intervalos:
