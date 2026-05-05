@@ -16,8 +16,7 @@ import numpy as np
 # ══════════════════════════════════════════════════════════════════════
 # 1. CARREGAMENTO
 # ══════════════════════════════════════════════════════════════════════
-FILE_PATH = "spotify_user_behavior_realistic_50000_rows.csv"
-
+FILE_PATH = "../data/spotify_user_behavior_realistic_50000_rows.csv"
 df = pd.read_csv(FILE_PATH)
 print(f"✅ Dataset carregado: {df.shape[0]:,} linhas × {df.shape[1]} colunas\n")
 
@@ -230,13 +229,20 @@ liked_features = (
 liked_features["pct"] = (liked_features["count"] / len(df) * 100).round(2)
 
 # ── 5.6 Relação skips × satisfação (por faixa) ────────────────────────
+max_skips = int(df["avg_skips_per_day"].max())
+
 df["skip_group"] = pd.cut(
     df["avg_skips_per_day"],
-    bins=[0, 3, 6, 10, 100],
-    labels=["Baixo (0–3)", "Médio (4–6)", "Alto (7–10)", "Muito alto (10+)"],
+    bins=[0, 3, 6, 10, 16, max_skips],
+    labels=[
+        "Baixo (0–3)",
+        "Médio (4–6)",
+        "Alto (7–10)",
+        "Muito alto (11–16)",
+        f"Extremo (17–{max_skips})",
+    ],
     right=True
 )
-
 skip_vs_satisfaction = (
     df.groupby("skip_group", observed=True)["music_suggestion_rating_1_to_5"]
     .agg(["mean", "count"])
@@ -262,15 +268,15 @@ print("✅ Todos os agrupamentos calculados.\n")
 # ══════════════════════════════════════════════════════════════════════
 # 6. EXPORTAÇÃO
 # ══════════════════════════════════════════════════════════════════════
-OUTPUT_ENRICHED   = "spotify_enriched.csv"
-OUTPUT_KPI        = "agg_kpis.csv"
-OUTPUT_GENRE      = "agg_genres.csv"
-OUTPUT_FEATURES   = "agg_desired_features.csv"
-OUTPUT_LIKED      = "agg_liked_features.csv"
-OUTPUT_AD         = "agg_ad_conversion.csv"
-OUTPUT_AGE        = "agg_engagement_by_age.csv"
-OUTPUT_SKIP       = "agg_skip_satisfaction.csv"
-OUTPUT_DEVICE     = "agg_device_user_type.csv"
+OUTPUT_ENRICHED   = "../data/spotify_enriched.csv"
+OUTPUT_KPI        = "../data/agg_kpis.csv"
+OUTPUT_GENRE      = "../data/agg_genres.csv"
+OUTPUT_FEATURES   = "../data/agg_desired_features.csv"
+OUTPUT_LIKED      = "../data/agg_liked_features.csv"
+OUTPUT_AD         = "../data/agg_ad_conversion.csv"
+OUTPUT_AGE        = "../data/agg_engagement_by_age.csv"
+OUTPUT_SKIP       = "../data/agg_skip_satisfaction.csv"
+OUTPUT_DEVICE     = "../data/agg_device_user_type.csv"
 
 df.to_csv(OUTPUT_ENRICHED, index=False)
 kpis.to_csv(OUTPUT_KPI, index=False)
