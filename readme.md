@@ -111,23 +111,76 @@ avg_skips_per_day
 
 Nesta etapa foi realizado o processo de ETL para preparação dos dados de comportamento de usuários, incluindo análise de consistência e tratamento das variáveis. Foram aplicados quartis (Q1 e Q3) e o intervalo interquartil (IQR) para identificação de outliers nas variáveis numéricas relacionadas ao comportamento e uso, como idade, horas médias de escuta semanal, número de playlists criadas, tempo de inatividade e skips diários, utilizando uma heurística baseada na porcentagem de valores extremos para avaliar seu impacto nas etapas posteriores da análise. Também foi realizada verificação de inconsistências em variáveis categóricas como país, tipo de assinatura, gênero favorito, dispositivo principal e preferências de recursos, por meio da normalização de texto para identificação de diferenças de escrita e capitalização, não sendo identificadas inconsistências semânticas relevantes. No ETL foram realizadas conversões de tipos de dados, incluindo transformação de datas de cadastro para datetime, variáveis categóricas para category e variáveis binárias de interação e conversão de anúncios (Yes/No) para valores booleanos. Não foi necessária uma limpeza profunda dos dados, uma vez que não foram identificados valores nulos, registros duplicados ou inconsistências estruturais relevantes no conjunto analisado.
 
-### Semana 3 – Transformações e enriquecimento
+### Semana 3 – Transformações e Enriquecimento dos Dados
 
-**Responsável:** Murilo 
+**Responsável:** Murilo de Oliveira Santos
 
-**Criação de novas colunas:**
+---
 
-- Faixa etária  
-- Tipo de usuário (heavy/casual)  
-- Grupo de anúncio  
+## Novas Colunas Derivadas
 
-**Criação de métricas derivadas:**
+### `age_group` — Faixa etária
+Criada a partir da coluna `age` com os seguintes intervalos:
 
-- Média de tempo de escuta
-- Funções mais pedidas
-- Média de satisfação  
+| Faixa | Intervalo |
+|-------|-----------|
+| < 18 | Até 17 anos |
+| 18–24 | De 18 a 24 anos |
+| 25–34 | De 25 a 34 anos |
+| 35–44 | De 35 a 44 anos |
+| 45–54 | De 45 a 54 anos |
+| 55+ | 55 anos ou mais |
 
-- Agrupamentos e agregações  
+### `user_type` — Tipo de usuário
+Classifica o usuário com base na mediana de `avg_listening_hours_per_week` (corte em **9,98 h/semana**):
+- **Heavy** → escuta igual ou acima da mediana
+- **Casual** → escuta abaixo da mediana
+
+### `ad_group` — Grupo de anúncio
+Combina as colunas `ad_interaction` e `ad_conversion_to_subscription`:
+- **Sem Anúncio** → usuário não interagiu com anúncios
+- **Anúncio → Converteu** → viu anúncio e assinou um plano
+- **Anúncio → Não Conv.** → viu anúncio mas não assinou
+
+---
+
+## Métricas Derivadas
+
+| Métrica | Valor |
+|---------|-------|
+| Média de horas de escuta/semana | 9,99 h |
+| Satisfação média (1–5) | 3,64 |
+| Função mais desejada | Mood-based Auto Playlists (16,84%) |
+| % usuários com plano pago | 54,9% |
+| % interação com anúncios | 35,0% |
+| Taxa de conversão via anúncio | 24,9% |
+| Média de skips/dia | 10,03 |
+| Média de playlists criadas | 8,00 |
+
+---
+
+## Agrupamentos e Agregações
+
+Foram geradas as seguintes tabelas de apoio ao dashboard:
+
+| Arquivo | Descrição |
+|---------|-----------|
+| `spotify_enriched.csv` | Dataset completo com as novas colunas |
+| `agg_kpis.csv` | KPIs gerais do projeto |
+| `agg_genres.csv` | Gêneros musicais favoritos por contagem e % |
+| `agg_desired_features.csv` | Funções desejadas pelos usuários |
+| `agg_liked_features.csv` | Funcionalidades mais curtidas |
+| `agg_ad_conversion.csv` | Conversão por grupo de anúncio |
+| `agg_engagement_by_age.csv` | Engajamento por faixa etária e tipo de usuário |
+| `agg_skip_satisfaction.csv` | Relação entre skips e satisfação |
+| `agg_device_user_type.csv` | Dispositivo principal por tipo de usuário |
+
+---
+
+## Arquivo Principal
+
+- **`semana3_transformacoes.py`** — script completo com todas as transformações, métricas e exportações desta etapa.
+
 
 
 ### Semana 4 – Modelagem e carga
