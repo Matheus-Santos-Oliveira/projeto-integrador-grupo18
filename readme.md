@@ -200,17 +200,15 @@ Foram geradas as seguintes tabelas de apoio ao dashboard:
 
 **Responsável:** João 
 
-- Estruturação da tabela final (modelo analítico)  
-- Exportação dos dados tratados (CSV ou banco)  
-- Validação da integridade dos dados  
-- Preparação da base para o dashboard  
+- Verificação de que todos os 9 arquivos CSV gerados na Semana 3 estão presentes na pasta data
+- Documentação formal das 22 colunas do modelo analítico final (spotify_enriched.csv), registrando nome, tipo, origem e descrição de cada coluna
+- Validação da integridade dos dados: total de 50.000 linhas, ausência de nulos nas colunas derivadas e consistência dos totais entre o spotify_enriched.csv e os   arquivos agg_
+- Exportação da base para banco de dados SQLite (spotify.db) na pasta data, carregando as 9 tabelas para uso por ferramentas de BI
 
 
 ### Semana 5 – Planejamento do dashboard e análise
 
 **Responsável:** Todos
-
-- Definição dos KPIs  
 
 **Criação dos gráficos:**
 
