@@ -1,0 +1,11 @@
+primary_device,user_type,count,avg_hours
+Car System,Casual,5038,6.8
+Car System,Heavy,5006,13.17
+Desktop,Casual,4948,6.85
+Desktop,Heavy,5089,13.16
+Mobile,Casual,4966,6.83
+Mobile,Heavy,4971,13.16
+Smart Speaker,Casual,5072,6.78
+Smart Speaker,Heavy,4978,13.12
+Tablet,Casual,4948,6.79
+Tablet,Heavy,4984,13.2

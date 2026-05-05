@@ -240,3 +240,4 @@ Consideraremos como métricas e indicadores o tempo médio de escuta semanal, a 
 
 A integração dessas métricas possibilita compreender o comportamento dos usuários em diferentes níveis de interação com a plataforma, identificando padrões de uso, satisfação e retenção. Além disso, a análise das funcionalidades mais desejadas pelos usuários complementa o estudo ao evidenciar oportunidades de melhoria na experiência da plataforma, contribuindo para futuras estratégias de evolução do produto e fortalecimento da proposta de valor dos planos premium.
 
+
