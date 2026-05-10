@@ -200,10 +200,31 @@ Foram geradas as seguintes tabelas de apoio ao dashboard:
 
 **Responsável:** João 
 
-- Verificação de que todos os 9 arquivos CSV gerados na Semana 3 estão presentes na pasta data
-- Documentação formal das 22 colunas do modelo analítico final (spotify_enriched.csv), registrando nome, tipo, origem e descrição de cada coluna
-- Validação da integridade dos dados: total de 50.000 linhas, ausência de nulos nas colunas derivadas e consistência dos totais entre o spotify_enriched.csv e os   arquivos agg_
-- Exportação da base para banco de dados SQLite (spotify.db) na pasta data, carregando as 9 tabelas para uso por ferramentas de BI
+| Coluna                           | Tipo                | Origem        | Descrição                                                      |
+| -------------------------------- | ------------------- | ------------- | -------------------------------------------------------------- |
+| `user_id`                        | Inteiro             | Base original | Identificador único do usuário                                 |
+| `country`                        | Texto               | Base original | País de origem do usuário                                      |
+| `age`                            | Inteiro             | Base original | Idade do usuário                                               |
+| `signup_date`                    | Data                | Base original | Data de cadastro do usuário                                    |
+| `subscription_type`              | Texto               | Base original | Tipo de assinatura do Spotify                                  |
+| `subscription_status`            | Texto               | Base original | Status da assinatura (ativa/inativa)                           |
+| `months_inactive`                | Inteiro             | Base original | Quantidade de meses de inatividade                             |
+| `inactive_3_months_flag`         | Booleano/Categórico | Derivada      | Indica se o usuário ficou inativo por 3 meses ou mais          |
+| `ad_interaction`                 | Texto               | Base original | Indica interação com anúncios                                  |
+| `ad_conversion_to_subscription`  | Texto/Booleano      | Derivada      | Indica conversão de usuário impactado por anúncio em assinante |
+| `music_suggestion_rating_1_to_5` | Inteiro             | Base original | Nota dada às sugestões musicais (1 a 5)                        |
+| `avg_listening_hours_per_week`   | Decimal             | Base original | Média de horas ouvidas por semana                              |
+| `favorite_genre`                 | Texto               | Base original | Gênero musical favorito                                        |
+| `most_liked_feature`             | Texto               | Base original | Funcionalidade mais apreciada pelo usuário                     |
+| `desired_future_feature`         | Texto               | Base original | Funcionalidade desejada para o futuro                          |
+| `primary_device`                 | Texto               | Base original | Dispositivo principal utilizado                                |
+| `playlists_created`              | Inteiro             | Base original | Quantidade de playlists criadas                                |
+| `avg_skips_per_day`              | Decimal             | Base original | Média de músicas puladas por dia                               |
+| `age_group`                      | Texto/Categórico    | Derivada      | Faixa etária do usuário                                        |
+| `user_type`                      | Texto/Categórico    | Derivada      | Classificação do perfil do usuário                             |
+| `ad_group`                       | Texto/Categórico    | Derivada      | Grupo de interação/conversão de anúncios                       |
+| `skip_group`                     | Texto/Categórico    | Derivada      | Faixa de comportamento de skips (músicas puladas)              |
+
 
 
 ### Semana 5 – Planejamento do dashboard e análise
