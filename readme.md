@@ -195,10 +195,16 @@ Foram geradas as seguintes tabelas de apoio ao dashboard:
 - **`semana3_transformacoes.py`** — script completo com todas as transformações, métricas e exportações desta etapa.
 
 
-
 ### Semana 4 – Modelagem e carga
 
 **Responsável:** João 
+
+- Verificação de que todos os 9 arquivos CSV gerados na Semana 3 estão presentes na pasta data
+- Documentação formal das 22 colunas do modelo analítico final (spotify_enriched.csv), registrando nome, tipo, origem e descrição de cada coluna
+- Validação da integridade dos dados: total de 50.000 linhas, ausência de nulos nas colunas derivadas e consistência dos totais entre o spotify_enriched.csv e os   arquivos agg_
+- Exportação da base para banco de dados SQLite (spotify.db) na pasta data, carregando as 9 tabelas para uso por ferramentas de BI
+
+#### Resultado da atividade da semana
 
 | Coluna                           | Tipo                | Origem        | Descrição                                                      |
 | -------------------------------- | ------------------- | ------------- | -------------------------------------------------------------- |
