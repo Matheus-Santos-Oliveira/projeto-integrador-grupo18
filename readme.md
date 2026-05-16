@@ -202,7 +202,7 @@ Foram geradas as seguintes tabelas de apoio ao dashboard:
 - Verificação de que todos os 9 arquivos CSV gerados na Semana 3 estão presentes na pasta data
 - Documentação formal das 22 colunas do modelo analítico final (spotify_enriched.csv), registrando nome, tipo, origem e descrição de cada coluna
 - Validação da integridade dos dados: total de 50.000 linhas, ausência de nulos nas colunas derivadas e consistência dos totais entre o spotify_enriched.csv e os   arquivos agg_
-- Exportação da base para banco de dados SQLite (spotify.db) na pasta data, carregando as 9 tabelas para uso por ferramentas de BI
+- Exportação da base para banco de dados SQLite (spotify.db) na pasta data, carregando as 9 tabelas, caso necessária escalabilidade em aplicações BI.
 
 #### Resultado da atividade da semana
 
