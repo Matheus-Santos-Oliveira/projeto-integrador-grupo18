@@ -249,6 +249,14 @@ Foram geradas as seguintes tabelas de apoio ao dashboard:
 - Construção do dashboard (Power BI ou similar)  
 - Interpretação dos resultados e geração de insights  
 
+#### Resultado da atividade da semana
+
+Nesta etapa foi desenvolvido o dashboard analítico interativo do projeto, utilizando os dados transformados nas etapas anteriores para criação de visualizações voltadas à análise de comportamento, engajamento, satisfação e monetização dos usuários da plataforma. Foram construídos gráficos relacionados aos gêneros musicais mais ouvidos, funcionalidades mais desejadas e mais apreciadas pelos usuários, impacto dos anúncios na experiência dos usuários, percentual de usuários com plano pago, relação entre comportamento de skips e satisfação média, além de análises comparativas entre dispositivos e perfis de usuários.
+
+O dashboard foi desenvolvido em Streamlit com estilização visual personalizada em tema dark, contendo filtros interativos, KPIs analíticos e componentes visuais para apresentação de insights e interpretações dos resultados. Durante a análise dos dados, foram identificados padrões relativamente homogêneos entre diferentes grupos de usuários, indicando que variáveis isoladas como interação com anúncios, dispositivo principal e quantidade de skips não apresentaram impacto expressivo sobre satisfação e engajamento na base analisada.
+
+Também foram realizados refinamentos nos insights analíticos e validações de coerência estatística das interpretações apresentadas, garantindo alinhamento entre os gráficos, métricas derivadas e conclusões obtidas ao longo do projeto.
+
 
 ### Semana 6 (meia semana) – Finalização e documentação
 
@@ -258,8 +266,14 @@ Foram geradas as seguintes tabelas de apoio ao dashboard:
 - Ajustes no dashboard  
 - Escrita final do README  
 - Organização do repositório  
-- Preparação para apresentação  
 
+#### Resultado da atividade da semana
+
+Nesta etapa final foram realizados os ajustes conclusivos do projeto, incluindo revisão geral das análises desenvolvidas, refinamento visual do dashboard e validação da consistência das métricas, agrupamentos e interpretações apresentadas. Também foram efetuados ajustes de layout, organização das seções analíticas, estilização visual e melhoria da experiência de navegação do dashboard interativo.
+
+Foi realizada a escrita final e padronização do README.md, documentando as etapas do processo ETL, transformações realizadas, métricas derivadas, objetivos do projeto e conclusões obtidas a partir das análises. Além disso, foram revisados os insights analíticos e estruturada a conclusão final do projeto, destacando os padrões identificados e as possíveis evoluções futuras do processo analítico.
+
+Por fim, foi feita a organização do repositório, revisão do código-fonte, separação dos arquivos de estilização e aplicação, limpeza de arquivos auxiliares e preparação final do projeto para apresentação e entrega.
 
 ### Conclusão
 
