@@ -7,6 +7,10 @@
 - Murilo de Oliveira Santos
 
 
+## Link do dashoboard com os resultados da análise: 
+https://grupo18.streamlit.app/
+
+
 ## Base de dados
 
 A base de dados utilizada foi obtida no Kaggle, intitulada Spotify User Behavior and Pattern, contendo cerca de 50 mil registros que simulam o comportamento de usuários em uma plataforma de streaming de música semelhante ao Spotify.
