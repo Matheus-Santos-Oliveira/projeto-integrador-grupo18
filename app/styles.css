@@ -1,0 +1,200 @@
+/* Mantém somente estilos próprios do dashboard.
+   Não esconde header, toolbar nem controles nativos do Streamlit. */
+
+/* Botão da sidebar em branco */
+[data-testid="collapsedControl"] svg,
+[data-testid="stSidebarCollapsedControl"] svg,
+button[title="Open sidebar"] svg,
+button[title="Close sidebar"] svg,
+button[aria-label="Open sidebar"] svg,
+button[aria-label="Close sidebar"] svg {
+    fill: white !important;
+    stroke: white !important;
+}
+
+/* ── Cabeçalho ── */
+.dash-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    margin: 0 0 12px 0;
+    line-height: 1.1;
+}
+
+.dash-group-line {
+    font-size: 1.55rem;
+    color: #1DB954;
+    font-weight: 800;
+    margin: 0 0 12px 0;
+}
+.dashboard-note {
+    background: rgba(29, 185, 84, 0.08);
+    border: 1px solid rgba(29, 185, 84, 0.35);
+    border-left: 5px solid #1DB954;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 12px 0 28px 0;
+    color: #e8eaf0;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.dashboard-note strong {
+    color: #1DB954;
+    font-weight: 800;
+}
+
+.intro-sub {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 1.8rem;
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+/* ── KPI Cards ── */
+.kpi-card {
+    background: linear-gradient(145deg, #151820, #1a1e2a);
+    border: 1px solid #1DB954;
+    border-radius: 14px;
+    padding: 18px 14px;
+    text-align: center;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 18px rgba(29,185,84,0.07);
+}
+
+.kpi-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1DB954;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.kpi-label {
+    font-size: 0.74rem;
+    color: #6b7280;
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    line-height: 1.35;
+}
+
+/* ── Subtítulos ── */
+h2, h3 {
+    font-size: 1.7rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+}
+
+/* ── Insight box ── */
+.section-desc {
+    background: #13161f;
+    border-left: 5px solid #1DB954;
+    border-radius: 0 14px 14px 0;
+    padding: 22px 28px;
+    font-size: 1.15rem;
+    color: #e4e8f0;
+    margin-top: 14px;
+    line-height: 1.9;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.section-desc strong {
+    color: #1DB954;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #1c1f2e;
+    margin: 1.8rem 0;
+}
+
+/* ── Conclusão final ── */
+.final-conclusion {
+    background: linear-gradient(145deg, #121722, #171d2b);
+
+    border: 1px solid rgba(29,185,84,0.18);
+    border-left: 5px solid #1DB954;
+
+    border-radius: 18px;
+
+    padding: 34px 38px;
+
+    margin-top: 30px;
+    margin-bottom: 35px;
+
+    box-shadow: 0 6px 22px rgba(0,0,0,0.24);
+
+    max-width: 97%;
+}
+
+.final-conclusion-title {
+    font-size: 1.85rem;
+    font-weight: 800;
+
+    color: #1DB954;
+
+    margin-bottom: 24px;
+}
+
+.final-conclusion-text {
+    font-size: 1.05rem;
+
+    line-height: 2;
+
+    color: #e5e7eb;
+}
+
+.final-conclusion-text p {
+    margin-bottom: 18px;
+}
+
+.conclusion-divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    margin-top: 30px;
+    margin-bottom: 28px;
+}
+
+.future-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    color: #1DB954;
+
+    margin-bottom: 16px;
+}
+
+.future-list {
+    padding-left: 22px;
+
+    line-height: 2;
+
+    color: #d9dde6;
+
+    font-size: 1rem;
+}
+
+.future-list li {
+    margin-bottom: 8px;
+    
+}.final-main-title {
+    font-size: 2.1rem;
+    font-weight: 800;
+
+    color: #ffffff;
+
+    margin-top: 28px;
+    margin-bottom: 20px;
+
+    letter-spacing: -0.5px;
+}
